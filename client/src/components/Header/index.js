@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function Trade() {
+function Header() {
     return (
         <div>
 
@@ -9,4 +9,4 @@ function Trade() {
     );
 }
 
-export default Trade;
+export default Header;
