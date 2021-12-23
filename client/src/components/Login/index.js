@@ -7,9 +7,9 @@ function Login() {
             <form className='login-form'>
                 <h1>Login:</h1>
                 <div>
-                    <label for="username"><b>Username:</b></label>
+                    <label htmlFor="username"><b>Username:</b></label>
                     <input type="text" placeholder="Enter username" />
-                    <label for="password"><b>Password:</b></label>
+                    <label htmlFor="password"><b>Password:</b></label>
                     <input type="password" placeholder="Enter password" />
                 </div>
                 <button type="submit">Login</button>
@@ -17,11 +17,11 @@ function Login() {
             <form className='signup-form'>
                 <h1>Sign Up:</h1>
                 <div>
-                    <label for="username"><b>Username:</b></label>
+                    <label htmlFor="username"><b>Username:</b></label>
                     <input type="text" placeholder="Enter username" />
-                    <label for="email"><b>Email:</b></label>
+                    <label htmlFor="email"><b>Email:</b></label>
                     <input type="text" placeholder="Enter email" />
-                    <label for="password"><b>Password:</b></label>
+                    <label htmlFor="password"><b>Password:</b></label>
                     <input type="password" placeholder="Enter password" />
                 </div>
                 <button type="submit">Sign Up</button>

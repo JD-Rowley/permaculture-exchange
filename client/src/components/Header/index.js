@@ -6,9 +6,9 @@ import './style.css';
 function Header() {
     return (
         <div className='header-container'>
-            <div className='header-logo'>
+            <a href="/" className='header-logo'>
                 <img src={HeaderLogo} alt="UPC Alternate Logo" />
-            </div>
+            </a>
             <div className='nav-container'>
                 <Nav />
             </div>
