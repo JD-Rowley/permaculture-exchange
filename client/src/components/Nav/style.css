@@ -1,0 +1,8 @@
+.nav-bar {
+    list-style: none;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    margin: 1rem;
+}
