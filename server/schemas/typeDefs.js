@@ -8,10 +8,24 @@ const typeDefs = gql`
         _id: ID
         username: String
         email: String
+        password: String
+        posts: [Post]
+    }
+
+    type Post {
+        _id: ID
+        postTitle: String
+        postDescription: String
+        createdAt: String
+        username: String
     }
 
     type Query {
-        User: User
+        me: User
+        users: [User]
+        user(username: String!): User
+        posts(username: String): [Post]
+        post(_id: ID!): Post
     }
 `;
 
