@@ -2,7 +2,7 @@
     list-style: none;
 }
 
-.nav-bar li a {
+.nav-link {
     text-decoration: none;
     margin: 1rem;
 }
