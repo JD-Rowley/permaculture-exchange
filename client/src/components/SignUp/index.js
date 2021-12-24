@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import SignUp from '../SignUp';
 import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../../utils/mutations';
+import { ADD_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 import './style.css';
 
-function Login() {
+function SignUp() {
     const [formState, setFormState] = useState({ username: '', email: '', password: '' });
-    const [login, { error }] = useMutation(LOGIN_USER);
+    const [addUser, { error }] = useMutation(ADD_USER);
 
       // update state based on form input changes
     const handleChange = (event) => {
@@ -25,7 +24,7 @@ function Login() {
 
         try {
         // execute addUser mutation and pass in variable data
-        const { data } = await login({
+        const { data } = await addUser({
             variables: { ...formState }
         });
         
@@ -37,8 +36,8 @@ function Login() {
 
     return (
         <main>
-            <form className='login-form' onSubmit={handleFormSubmit}>
-                <h1>Login:</h1>
+            <form className='signup-form' onSubmit={handleFormSubmit}>
+                <h1>Sign Up:</h1>
                 <div>
                     <label htmlFor='username'><b>Username:</b></label>
                     <input 
@@ -47,6 +46,15 @@ function Login() {
                         name='username'
                         id='username'
                         value={formState.username}
+                        onChange={handleChange} 
+                    />
+                    <label htmlFor='email'><b>Email:</b></label>
+                    <input
+                        type='email' 
+                        placeholder='Enter email'
+                        name='email'
+                        id='email'
+                        value={formState.email}
                         onChange={handleChange} 
                     />
                     <label htmlFor='password'><b>Password:</b></label>
@@ -59,12 +67,11 @@ function Login() {
                         onChange={handleChange} 
                     />
                 </div>
-                <button type='submit'>Login</button>
+                <button type='submit'>Sign Up</button>
             </form>
-            {error && <div>Login failed</div>}
-            <SignUp />
+            {error && <div>Sign up failed</div>}
         </main>
     );
 }
 
-export default Login;
+export default SignUp;
