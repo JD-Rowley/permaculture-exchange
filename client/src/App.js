@@ -1,24 +1,39 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import Header from './components/Header';
+import Login from './components/Login';
+import About from './components/About';
+import Trade from './components/Trade';
+import NoMatch from './components/NoMatch';
 import './App.css';
+
+const httpLink = createHttpLink({
+  uri: '/graphql'
+});
+
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache()
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+      <Router>
+        <>
+          <Header />
+          <Switch>
+            <Route exact path='/' component={About} />
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/about' component={About} />
+            <Route exact path='/trade' component={Trade} />
+
+            <Route component={NoMatch} /> 
+          </Switch>
+        </>
+      </Router>
+    </ApolloProvider>
   );
 }
 
