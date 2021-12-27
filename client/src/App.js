@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import Header from './components/Header';
-import Login from './components/Login';
-import About from './components/About';
-import Trade from './components/Trade';
-import NoMatch from './components/NoMatch';
+import Login from './pages/Login';
+import About from './pages/About';
+import Trade from './pages/Trade';
+import NoMatch from './pages/NoMatch';
 import './App.css';
 
 const httpLink = createHttpLink({

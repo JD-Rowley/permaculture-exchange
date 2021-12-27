@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SignUp from '../SignUp';
+import SignUp from '../../components/SignUp';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';

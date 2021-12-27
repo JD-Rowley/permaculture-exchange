@@ -1,5 +1,5 @@
 import React from 'react';
-import TradePost from '../TradePost';
+import TradePost from '../../components/TradePost';
 import './style.css';
 
 function Trade() {
