@@ -29,6 +29,11 @@ function SignUp() {
         });
         
         Auth.login(data.addUser.token);
+        setFormState({
+            username: '',
+            email: '',
+            password: ''
+        });
         } catch (e) {
         console.error(e);
         }
