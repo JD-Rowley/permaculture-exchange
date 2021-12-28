@@ -34,6 +34,11 @@ export const QUERY_USER = gql`
                 postDescription
                 createdAt
                 username
+                comments {
+                    commentBody
+                    username
+                    createdAt
+                }
             }
         }
     }
