@@ -1,12 +1,22 @@
 import React from 'react';
-import TradePost from '../../components/TradePost';
+import { useQuery } from '@apollo/client';
+import { QUERY_POSTS } from '../../utils/queries';
+import TradeList from '../../components/TradeList';
 import './style.css';
 
 function Trade() {
+    const { loading, data } = useQuery(QUERY_POSTS);
+    const posts = data?.posts || [];
+
     return (
-        <div>
-            <h1>This is the trade page!</h1>
-            <TradePost />
+        <div className='container'>
+            <div className='card-container'>
+                {loading ? (
+                    <div>Loading...</div>
+                ) : (
+                    <TradeList posts={posts} title='This is the trade page!' />
+                )}
+            </div>
         </div>
     );
 }
