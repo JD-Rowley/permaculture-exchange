@@ -12,6 +12,11 @@ export const QUERY_ME = gql`
                 postDescription
                 createdAt
                 username
+                comments {
+                    commentBody
+                    username
+                    createdAt
+                }
             }
         }
     }
@@ -54,6 +59,11 @@ export const QUERY_POST = gql`
             postDescription
             createdAt
             username
+            comments {
+                commentText
+                username
+                createdAt
+            }
         }
     }
 `

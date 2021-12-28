@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TradeList = ({ posts, title }) => {
     if (!posts.length) {
@@ -12,8 +13,10 @@ const TradeList = ({ posts, title }) => {
           posts.map(post => (
             <div key={post._id}>
               <div className='card-header'>
-                <b>{post.postTitle}</b>
-                <p>posted by: {post.username} on {post.createdAt}</p>
+                <Link to={`/trade/${post._id}`}>
+                    <b>{post.postTitle}</b>
+                    <p>posted by: {post.username} on {post.createdAt}</p>
+                </Link>{' '}
               </div>
               <div className='card-body'>
                 <p>{post.postDescription}</p>

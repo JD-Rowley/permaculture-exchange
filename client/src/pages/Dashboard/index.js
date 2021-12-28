@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, useParams } from 'react-router-dom';
-import Post from '../../components/TradePost';
+import Post from '../TradePost';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../../utils/queries'
 import './style.css';

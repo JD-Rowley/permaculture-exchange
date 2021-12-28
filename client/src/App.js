@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import About from './pages/About';
 import Dashboard from './pages/Dashboard';
 import Trade from './pages/Trade';
+import TradePost from './pages/TradePost';
 import NoMatch from './pages/NoMatch';
 import './App.css';
 
@@ -30,6 +31,7 @@ function App() {
             <Route exact path='/about' component={About} />
             <Route exact path='/dashboard' component={Dashboard} />
             <Route exact path='/trade' component={Trade} />
+            <Route exact path='/trade/:id' component={TradePost} />
 
             <Route component={NoMatch} /> 
           </Switch>
