@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose')
+const commentSchema = require('./Comment')
 const dateFormat = require('../utils/dateFormat')
 
 const postSchema = new Schema(
@@ -23,9 +24,14 @@ const postSchema = new Schema(
         username: {
             type: String,
             required: true
-        }
+        },
+        comments: [commentSchema]
     }
 )
+
+postSchema.virtual('commentCount').get(function() {
+    return this.comments.length;
+});
 
 const Post = model('Post', postSchema)
 
