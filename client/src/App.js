@@ -4,7 +4,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@ap
 import Header from './components/Header';
 import Login from './pages/Login';
 import About from './pages/About';
-import Dashboard from './pages/Dashboard';
+import Profile from './pages/Profile';
 import Trade from './pages/Trade';
 import TradePost from './pages/TradePost';
 import NoMatch from './pages/NoMatch';
@@ -29,7 +29,7 @@ function App() {
             <Route exact path='/' component={About} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/about' component={About} />
-            <Route exact path='/dashboard' component={Dashboard} />
+            <Route exact path='/profile/:username?' component={Profile} />
             <Route exact path='/trade' component={Trade} />
             <Route exact path='/trade/:id' component={TradePost} />
 

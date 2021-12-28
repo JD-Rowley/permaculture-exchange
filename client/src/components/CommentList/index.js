@@ -9,8 +9,10 @@ function CommentList({ comments }) {
                 {comments &&
                     comments.map(comment => (
                         <div key={comment._id}>
-                            <p>{comment.commentText}</p>
-                            <div>{comment.username} at {comment.createdAt}</div>
+                            <div>{comment.commentText}</div>
+                            <Link to={`/profile/${comment.username}`}>
+                                <div>{comment.username} at {comment.createdAt}</div>
+                            </Link>
                         </div>
                     ))}
             </div>

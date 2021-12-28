@@ -13,7 +13,7 @@ export const QUERY_ME = gql`
                 createdAt
                 username
                 comments {
-                    commentBody
+                    commentText
                     username
                     createdAt
                 }
@@ -35,7 +35,7 @@ export const QUERY_USER = gql`
                 createdAt
                 username
                 comments {
-                    commentBody
+                    commentText
                     username
                     createdAt
                 }

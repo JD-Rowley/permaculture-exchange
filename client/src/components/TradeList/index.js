@@ -8,15 +8,17 @@ const TradeList = ({ posts, title }) => {
   
     return (
       <div>
-        <h1>{title}</h1>
+        <h3>{title}</h3>
         {posts &&
           posts.map(post => (
             <div key={post._id}>
               <div className='card-header'>
                 <Link to={`/trade/${post._id}`}>
                     <b>{post.postTitle}</b>
-                    <p>posted by: {post.username} on {post.createdAt}</p>
-                </Link>{' '}
+                </Link>
+                    <Link to={`/profile/${post.username}`}>
+                      <p>posted by: {post.username} on {post.createdAt}</p>
+                    </Link>
               </div>
               <div className='card-body'>
                 <p>{post.postDescription}</p>
