@@ -17,7 +17,7 @@ function Nav() {
                 <a href="https://www.gofundme.com/f/utahpermaculture" className='nav-link'>Donate</a>
                 {Auth.loggedIn() ? (
                     <>
-                        <Link to="/dashboard" className='nav-link'>Dashboard</Link>
+                        <Link to="/profile" className='nav-link'>Profile</Link>
                         <a href="/" className='nav-link' onClick={logout}>Logout</a>
                     </>
                 ) : (
