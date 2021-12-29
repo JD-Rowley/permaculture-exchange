@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect, useParams, Link } from 'react-router-dom';
 import TradeList from '../../components/TradeList';
+import PostForm from '../../components/PostForm';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../../utils/queries'
 import Auth from '../../utils/auth';
@@ -32,6 +33,7 @@ function Profile() {
     return (
         <div className='profile'>
             <h2>{userParam ? `${user.username}'s` : 'Your'} profile.</h2>
+            <div>{!userParam && <PostForm />}</div>
             <div>
                 <TradeList posts={user.posts} title={`${user.username}'s posts:`} />
             </div>
