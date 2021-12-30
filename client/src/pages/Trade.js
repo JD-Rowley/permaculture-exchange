@@ -1,10 +1,9 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import { QUERY_POSTS } from '../../utils/queries';
-import TradeList from '../../components/TradeList';
-import PostForm from '../../components/PostForm';
-import Auth from '../../utils/auth';
-import './style.css';
+import { QUERY_POSTS } from '../utils/queries';
+import TradeList from '../components/TradeList';
+import PostForm from '../components/PostForm';
+import Auth from '../utils/auth';
 
 function Trade() {
     const { loading, data } = useQuery(QUERY_POSTS);

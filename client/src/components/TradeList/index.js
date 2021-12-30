@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const TradeList = ({ posts, title }) => {
+
     if (!posts.length) {
       return <h3>No posts Yet</h3>;
     }

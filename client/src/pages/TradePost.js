@@ -1,11 +1,10 @@
 import React from 'react';
-import CommentList from '../../components/CommentList';
-import CommentForm from '../../components/CommentForm';
+import CommentList from '../components/CommentList';
+import CommentForm from '../components/CommentForm';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { QUERY_POST } from '../../utils/queries';
-import Auth from '../../utils/auth';
-import './style.css';
+import { QUERY_POST } from '../utils/queries';
+import Auth from '../utils/auth';
 
 function TradePost() {
     const { id: postId } = useParams();
@@ -21,7 +20,7 @@ function TradePost() {
     }
 
     return (
-        <div className='card-container'>
+        <section className='post-container'>
             <div className='card-header'>
                 <div>
                     <h3>{post.postTitle}</h3>
@@ -33,11 +32,9 @@ function TradePost() {
                     <p>{post.postDescription}</p>
                 </div>
             </div>
-            <div>
-                {Auth.loggedIn() && <CommentForm postId={post._id} />}
-                {post.comments.length > 0 && <CommentList comments={post.comments} />}
-            </div>
-        </div>
+            {Auth.loggedIn() && <CommentForm postId={post._id} />}
+            {post.comments.length > 0 && <CommentList comments={post.comments} />}
+        </section>
     );
 }
 

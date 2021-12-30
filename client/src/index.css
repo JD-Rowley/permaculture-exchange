@@ -12,8 +12,19 @@ code {
     monospace;
 }
 
-/* .container {
+/* about */
+
+.about {
   display: flex;
+  flex-direction: column;
+  height: 85vh;
   justify-content: center;
   align-items: center;
-} */
+}
+
+.logo {
+  height: 45vh;
+  width: auto;
+}
+
+/* about end */

@@ -10,8 +10,9 @@ function CommentList({ comments }) {
                     <div key={comment._id}>
                         <p>{comment.commentText}</p>
                         <Link to={`/profile/${comment.username}`}>
-                            <div>{comment.username} at {comment.createdAt}</div>
+                            {comment.username}
                         </Link>
+                        <span> at {comment.createdAt}</span>
                     </div>
                 ))}
         </div>

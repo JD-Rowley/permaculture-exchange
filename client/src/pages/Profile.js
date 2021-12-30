@@ -1,11 +1,10 @@
 import React from 'react';
 import { Redirect, useParams, Link } from 'react-router-dom';
-import TradeList from '../../components/TradeList';
-import PostForm from '../../components/PostForm';
+import TradeList from '../components/TradeList';
+import PostForm from '../components/PostForm';
 import { useQuery } from '@apollo/client';
-import { QUERY_USER, QUERY_ME } from '../../utils/queries'
-import Auth from '../../utils/auth';
-import './style.css';
+import { QUERY_USER, QUERY_ME } from '../utils/queries'
+import Auth from '../utils/auth';
 
 function Profile() {
     const { username: userParam } = useParams();
