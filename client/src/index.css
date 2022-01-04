@@ -93,13 +93,25 @@ code {
 
 .login-sign {
   margin: 40px 50%;
+  font-size: 22px;
   outline: none;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+  border-radius: 10px;
+  box-shadow: 0 5px #999;
   font-family: "open_sanslight";
   background-color: var(--sand);
   color: var(--cacao);
+}
+
+.login-form {
+  width: 50%;
+  float: left;
+}
+
+.signup-form {
+  width: 50%;
+  float: right;
+  border-left: 5px solid;
 }
 
 .login-sign:hover {
@@ -108,10 +120,28 @@ code {
 
 .login-sign:active {
   background-color: var(--russet);
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  box-shadow: 0 2px var(--cacao);
+  transform: translateY(2px);
 }
+
+/* .login-warning {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-warning {
+  display: flex;
+  justify-content: center;
+} */
 /* Login and Sign Up End */
+
+/* About Page Info */
+.about p {
+  font-family: "open_sanslight";
+}
+
+/* About Page Info end */
+
 .logo {
   height: 45vh;
   width: auto;

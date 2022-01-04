@@ -86,7 +86,7 @@ function SignUp() {
           Sign Up
         </button>
       </form>
-      {error && <div>Sign up failed</div>}
+      {error && <div className="sign-warning">Sign up failed</div>}
     </main>
   );
 }

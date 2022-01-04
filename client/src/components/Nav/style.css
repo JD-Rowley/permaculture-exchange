@@ -1,5 +1,9 @@
 .nav-bar {
   list-style: none;
+  border-bottom: 10px dashed var(--soil);
+  padding: 0 0 10px;
+  width: auto;
+  font-size: 25px;
 }
 
 .nav-link {
