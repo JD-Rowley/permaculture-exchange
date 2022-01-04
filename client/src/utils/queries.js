@@ -65,6 +65,7 @@ export const QUERY_POST = gql`
             createdAt
             username
             comments {
+                _id
                 commentText
                 username
                 createdAt

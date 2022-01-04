@@ -13,21 +13,21 @@ function Nav() {
     <ul className="nav-bar">
       <li>
         <Link to="/about" className="nav-link">
-          ABOUT
+          About
         </Link>
         <Link to="/trade" className="nav-link">
-          TRADE
+          Trade
         </Link>
         <a
           href="https://www.gofundme.com/f/utahpermaculture"
           className="nav-link"
         >
-          DONATE
+          Donate
         </a>
         {Auth.loggedIn() ? (
           <>
-            <Link to="/dashboard" className="nav-link">
-              Dashboard
+            <Link to="/profile" className="nav-link">
+              Profile
             </Link>
             <a href="/" className="nav-link" onClick={logout}>
               Logout
@@ -36,7 +36,7 @@ function Nav() {
         ) : (
           <>
             <Link to="/login" className="nav-link">
-              LOGIN
+              Login
             </Link>
           </>
         )}

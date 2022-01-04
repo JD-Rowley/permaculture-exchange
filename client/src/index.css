@@ -57,8 +57,12 @@ code {
     monospace;
 }
 
-.container {
+/* about */
+
+.about {
   display: flex;
+  flex-direction: column;
+  height: 85vh;
   justify-content: center;
   align-items: center;
 }
@@ -107,4 +111,10 @@ code {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-/* Login and Sign Up End */ ;
+/* Login and Sign Up End */
+.logo {
+  height: 45vh;
+  width: auto;
+}
+
+/* about end */
