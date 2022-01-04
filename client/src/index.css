@@ -7,6 +7,38 @@
   --light-secondary: #e6cbad;
 }
 
+/* Archistico Bold font */
+@font-face {
+  font-family: "archisticobold";
+  src: url("fonts/Archistico_Bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Archistico normal font */
+@font-face {
+  font-family: "archisticonormal";
+  src: url("fonts/Archistico_Simple-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* OpenSans Italic font */
+@font-face {
+  font-family: "open_sansitalic";
+  src: url("fonts/OpenSans-Italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* OpenSans light font */
+@font-face {
+  font-family: "open_sansitalic";
+  src: url("fonts/OpenSans-Light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -30,3 +62,20 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+/* Login and Sign Up */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container label {
+  padding: 20px 0 0;
+}
+/* Login and Sign Up End */ ;
