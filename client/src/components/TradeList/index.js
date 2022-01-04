@@ -17,9 +17,7 @@ const TradeList = ({ posts, title }) => {
                 <Link to={`/trade/${post._id}`}>
                     <b>{post.postTitle}</b>
                 </Link>
-                    <Link to={`/profile/${post.username}`}>
-                      <p>posted by: {post.username} on {post.createdAt}</p>
-                    </Link>
+                    <p>posted by: <Link to={`/profile/${post.username}`}>{post.username}</Link> on {post.createdAt}</p>
               </div>
               <div className='card-body'>
                 <p>{post.postDescription}</p>
