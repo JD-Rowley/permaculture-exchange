@@ -46,10 +46,10 @@ function Login() {
   return (
     <main>
       <form className="login-form main-container" onSubmit={handleFormSubmit}>
-        <h1>Login:</h1>
+        <h1>LOGIN:</h1>
         <div className="flex-container">
           <label htmlFor="email">
-            <b>Email:</b>
+            <b>EMAIL:</b>
           </label>
           <input
             type="email"
@@ -60,7 +60,7 @@ function Login() {
             onChange={handleChange}
           />
           <label htmlFor="password">
-            <b>Password:</b>
+            <b>PASSWORD:</b>
           </label>
           <input
             type="password"
@@ -71,7 +71,7 @@ function Login() {
             onChange={handleChange}
           />
         </div>
-        <button className="login-button" type="submit">
+        <button className="login-sign" type="submit">
           Login
         </button>
       </form>

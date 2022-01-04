@@ -3,8 +3,8 @@
   --russet: #ac6d45;
   --soil: #44372f;
   --cacao: #25211a;
-  --light: #bebf9f;
-  --light-secondary: #e6cbad;
+  --avocado: #bebf9f;
+  --sand: #e6cbad;
 }
 
 /* Archistico Bold font */
@@ -33,7 +33,7 @@
 
 /* OpenSans light font */
 @font-face {
-  font-family: "open_sansitalic";
+  font-family: "open_sanslight";
   src: url("fonts/OpenSans-Light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -73,9 +73,38 @@ code {
 .main-container h1 {
   display: flex;
   justify-content: center;
+  font-family: "archisticobold";
+  color: var(--olive);
+  margin: auto;
 }
 
 .flex-container label {
   padding: 20px 0 0;
+  font-family: "open_sansitalic";
+}
+
+.flex-container input {
+  font-family: "open_sanslight";
+}
+
+.login-sign {
+  margin: 40px 50%;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  font-family: "open_sanslight";
+  background-color: var(--sand);
+  color: var(--cacao);
+}
+
+.login-sign:hover {
+  background-color: var(--russet);
+}
+
+.login-sign:active {
+  background-color: var(--russet);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 /* Login and Sign Up End */ ;
