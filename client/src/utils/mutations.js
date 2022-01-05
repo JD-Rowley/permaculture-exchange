@@ -30,6 +30,7 @@ export const ADD_POST = gql`
             _id
             postTitle
             postDescription
+            createdAt
             username
             comments {
                 _id
