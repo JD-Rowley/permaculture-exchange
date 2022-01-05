@@ -1,6 +1,8 @@
 const { User, Post, Comment } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
+const path = require('path')
+const fs = require('fs')
 
 const resolvers = {
     Query: {
@@ -29,7 +31,10 @@ const resolvers = {
         },
         post: async (parent, { _id }) => {
             return Post.findOne({ _id })
-        }
+        },
+/*         files: () => {
+           //return the record of files uploaded from your DB or API or filesystem
+        } */
     },
     Mutation: {
         addUser: async(parent, args) => {
@@ -82,7 +87,19 @@ const resolvers = {
             }
       
             throw new AuthenticationError('You need to be logged in!');
-          }
+        },
+        uploadFile: async (parent, { file }) => {
+            const { createReadStream, filename, mimetype, encoding } = await file;
+
+            console.log(filename)
+            const stream = fs.createReadStream()
+            const pathName = path.join(__dirname, `../public/images/${filename}`)
+            await stream.pipe(fs.createWriteStream(pathName))
+
+            return {
+                url: `http://localhost:3001/images/${filename}`,
+            }
+        }
     }
 };
 

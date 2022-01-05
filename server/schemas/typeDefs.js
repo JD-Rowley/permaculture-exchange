@@ -19,6 +19,7 @@ const typeDefs = gql`
         createdAt: String
         username: String
         comments: [Comment]
+        file: [File]
     }
 
     type Comment {
@@ -33,12 +34,20 @@ const typeDefs = gql`
         user: User
     }
 
+    type File {
+        filename: String
+        mimetype: String
+        encoding: String
+        url: String
+    }
+
     type Query {
         me: User
         users: [User]
         user(username: String!): User
         posts(username: String): [Post]
         post(_id: ID!): Post
+        uploads: [File]
     }
 
     type Mutation {
@@ -46,6 +55,8 @@ const typeDefs = gql`
         addUser(username: String!, email: String!, password: String!): Auth
         addPost(postTitle: String!, postDescription: String!): Post
         addComment(postId: ID!, commentText: String!): Post
+        singleUpload(file: Upload!): File!
+        uploadFile(file: Upload!): File!
     }
 `;
 

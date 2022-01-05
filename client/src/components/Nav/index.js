@@ -14,6 +14,7 @@ function Nav() {
             <li>
                 <Link to="/about" className='nav-link'>About</Link>
                 <Link to="/trade" className='nav-link'>Trade</Link>
+                <Link to="/upload" className='nav-link'>Upload</Link>
                 <a href="https://www.gofundme.com/f/utahpermaculture" className='nav-link'>Donate</a>
                 {Auth.loggedIn() ? (
                     <>

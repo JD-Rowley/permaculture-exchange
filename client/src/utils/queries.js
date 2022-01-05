@@ -70,6 +70,11 @@ export const QUERY_POST = gql`
                 username
                 createdAt
             }
+            files {
+                _id
+                url
+                createdAt
+            }
         }
     }
 `

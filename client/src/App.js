@@ -10,6 +10,9 @@ import Trade from './pages/Trade';
 import TradePost from './pages/TradePost';
 import NoMatch from './pages/NoMatch';
 import './App.css';
+import Upload from './pages/Upload'
+
+import { createUploadLink } from 'apollo-upload-client'
 
 const httpLink = createHttpLink({
   uri: '/graphql'
@@ -26,8 +29,12 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+const uploadLink = createUploadLink({
+  uri: 'http://localhost:3001/'
+})
+
 const client = new ApolloClient({
-  link: authLink.concat(httpLink),
+  link: authLink.concat(httpLink, uploadLink),
   cache: new InMemoryCache()
 });
 
@@ -44,7 +51,7 @@ function App() {
             <Route exact path='/profile/:username?' component={Profile} />
             <Route exact path='/trade' component={Trade} />
             <Route exact path='/trade/:id' component={TradePost} />
-
+            <Route exact path='/upload' component={Upload} />
             <Route component={NoMatch} /> 
           </Switch>
         </>
