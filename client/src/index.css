@@ -58,7 +58,6 @@ code {
 }
 
 /* about */
-
 .about {
   display: flex;
   flex-direction: column;
@@ -66,6 +65,11 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+.about p {
+  font-family: "open_sanslight";
+}
+/*about end */
 
 /* Login and Sign Up */
 .flex-container {
@@ -78,8 +82,9 @@ code {
   display: flex;
   justify-content: center;
   font-family: "archisticobold";
-  color: var(--olive);
+  color: var(--soil);
   margin: auto;
+  padding-top: 20px;
 }
 
 .flex-container label {
@@ -91,8 +96,34 @@ code {
   font-family: "open_sanslight";
 }
 
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 25% 10px;
+  background-image: linear-gradient(
+    to top left,
+    var(--olive),
+    rgba(190, 191, 159, -0.5)
+  );
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 25%;
+  background-image: linear-gradient(
+    to top left,
+    var(--olive),
+    rgba(190, 191, 159, 0.5)
+  );
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
 .login-sign {
-  margin: 40px 50%;
+  margin: 20px;
   font-size: 22px;
   outline: none;
   border: none;
@@ -101,17 +132,6 @@ code {
   font-family: "open_sanslight";
   background-color: var(--sand);
   color: var(--cacao);
-}
-
-.login-form {
-  width: 50%;
-  float: left;
-}
-
-.signup-form {
-  width: 50%;
-  float: right;
-  border-left: 5px solid;
 }
 
 .login-sign:hover {
@@ -124,27 +144,19 @@ code {
   transform: translateY(2px);
 }
 
-/* .login-warning {
-  display: flex;
-  justify-content: center;
+.error-warning {
+  text-align: center;
+  padding: 5px;
+  margin: 10px 46%;
+  font-family: "open_sansitalic";
+  color: red;
+  background-color: #ffb6c1;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-.sign-warning {
-  display: flex;
-  justify-content: center;
-} */
 /* Login and Sign Up End */
-
-/* About Page Info */
-.about p {
-  font-family: "open_sanslight";
-}
-
-/* About Page Info end */
 
 .logo {
   height: 45vh;
   width: auto;
 }
-
-/* about end */
