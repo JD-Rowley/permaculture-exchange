@@ -1,6 +1,7 @@
 const { User, Post, Comment } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
+const { post } = require('../models/Comment');
 
 const resolvers = {
     Query: {
@@ -65,7 +66,7 @@ const resolvers = {
                     { new: true }
                 )
 
-                return post
+                return post;
             }
 
             throw new AuthenticationError('You need to be logged in!')
@@ -82,7 +83,24 @@ const resolvers = {
             }
       
             throw new AuthenticationError('You need to be logged in!');
-          }
+          },
+        deletePost: async (parent, { _id }) => {
+            const deletedPost = await Post.findOneAndRemove(
+                { _id },
+                { new: true }
+            );
+
+            return deletedPost;
+        },
+        deleteComment: async (parent, { postId, commentId }) => {
+            const deletedComment = await Post.findOneAndUpdate(
+                { _id: postId },
+                { $pull: { comments: { _id: commentId }}},
+                { new: true }
+            );
+
+            return deletedComment;
+        }
     }
 };
 
