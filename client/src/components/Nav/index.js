@@ -1,19 +1,48 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+import Auth from "../../utils/auth";
+import "./style.css";
+
+function logout(e) {
+  e.preventDefault();
+  Auth.logout();
+}
 
 function Nav() {
-    return (
-        <header>
-            <ul>
-                <li>
-                    <a href="#about">About</a>
-                    <a href="#trade">Trade</a>
-                    <a href="https://www.gofundme.com/f/utahpermaculture">Donate</a>
-                    <a href="#login">Login</a>
-                    <a href="#logout">Logout</a>
-                </li>
-            </ul>
-        </header>
-    );
+  return (
+    <ul className="nav-bar">
+      <li>
+        <Link to="/about" className="nav-link">
+          About
+        </Link>
+        <Link to="/trade" className="nav-link">
+          Trade
+        </Link>
+        <a
+          href="https://www.gofundme.com/f/utahpermaculture"
+          className="nav-link"
+        >
+          Donate
+        </a>
+        {Auth.loggedIn() ? (
+          <>
+            <Link to="/profile" className="nav-link">
+              Profile
+            </Link>
+            <a href="/" className="nav-link" onClick={logout}>
+              Logout
+            </a>
+          </>
+        ) : (
+          <>
+            <Link to="/login" className="nav-link">
+              Login
+            </Link>
+          </>
+        )}
+      </li>
+    </ul>
+  );
 }
 
 export default Nav;

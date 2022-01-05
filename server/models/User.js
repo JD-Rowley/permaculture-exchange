@@ -20,7 +20,17 @@ const userSchema = new Schema(
             required: true,
             minlength: 5
         },
+<<<<<<< HEAD
     },
+=======
+        posts: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Post'
+            }
+        ]
+    }
+>>>>>>> develop
 );
 
 // set up pre-save middleware to create password
@@ -41,4 +51,8 @@ userSchema.methods.isCorrectPassword = async function (password) {
 
 const User = model('User', userSchema);
 
+<<<<<<< HEAD
 module.exports = User;
+=======
+module.exports = User;
+>>>>>>> develop

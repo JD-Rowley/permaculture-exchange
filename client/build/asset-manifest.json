@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.92d99c4e.css",
+    "main.js": "/static/js/main.2d70b4eb.js",
+    "static/js/787.88c4daa2.chunk.js": "/static/js/787.88c4daa2.chunk.js",
+    "static/media/Logo.png": "/static/media/Logo.7e4283b9e700a9b7598e.png",
+    "static/media/Archistico_Bold-webfont.woff": "/static/media/Archistico_Bold-webfont.6ee9941d5bf31206851d.woff",
+    "static/media/Archistico_Simple-webfont.woff": "/static/media/Archistico_Simple-webfont.0186b2de7079800ca2f7.woff",
+    "static/media/Alternate_Logo.png": "/static/media/Alternate_Logo.ad9a34fb5724253de498.png",
+    "static/media/OpenSans-Italic-webfont.woff": "/static/media/OpenSans-Italic-webfont.0882f677c98c2d7b0426.woff",
+    "static/media/OpenSans-Light-webfont.woff": "/static/media/OpenSans-Light-webfont.ff2cc377991601bb87c3.woff",
+    "index.html": "/index.html",
+    "main.92d99c4e.css.map": "/static/css/main.92d99c4e.css.map",
+    "main.2d70b4eb.js.map": "/static/js/main.2d70b4eb.js.map",
+    "787.88c4daa2.chunk.js.map": "/static/js/787.88c4daa2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92d99c4e.css",
+    "static/js/main.2d70b4eb.js"
+  ]
+}
