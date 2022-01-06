@@ -1,8 +1,9 @@
 import React from 'react';
 import Logo from '../assets/img/Logo.png';
-import spirit from '../assets/img/Screen Shot 2022-01-05 at 10.33.54 PM.jpg'
+import spirit from '../assets/img/spirit.jpg'
+import vows from '../assets/img/vows.jpg'
 
-function HandBook() {
+function Handbook() {
     return (
         <section className='about'>
             <div>
@@ -27,7 +28,7 @@ function HandBook() {
                     <img src={spirit} className='logo' alt="spirtual wheel of importance" />
                 </div>
                 <div>
-                    <img src={spirit} className='logo' alt="UPC Logo" />
+                    <img src={vows} className='logo' alt="a list of vows by Joanna Macy" />
                 </div>
             </div>
         </section>

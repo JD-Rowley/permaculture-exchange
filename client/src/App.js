@@ -9,6 +9,7 @@ import Profile from './pages/Profile';
 import Trade from './pages/Trade';
 import TradePost from './pages/TradePost';
 import NoMatch from './pages/NoMatch';
+import Handbook from './pages/Handbook';
 import './App.css';
 
 const httpLink = createHttpLink({
@@ -44,8 +45,9 @@ function App() {
             <Route exact path='/profile/:username?' component={Profile} />
             <Route exact path='/trade' component={Trade} />
             <Route exact path='/trade/:id' component={TradePost} />
+            <Route exact path='/Handbook' component={Handbook} />
 
-            <Route component={NoMatch} /> 
+            <Route component={NoMatch} />
           </Switch>
         </>
       </Router>
