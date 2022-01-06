@@ -18,6 +18,9 @@ function Nav() {
         <Link to="/trade" className="nav-link">
           Trade
         </Link>
+        <Link to="/handbook" className="nav-link">
+          Handbook
+        </Link>
         <a
           href="https://www.gofundme.com/f/utahpermaculture"
           className="nav-link"

@@ -3,12 +3,6 @@ const { gql } = require('apollo-server-express');
 
 // create our typeDefs
 const typeDefs = gql`
-<<<<<<< HEAD
-  
-  type Query {
-    helloWorld: String
-  }
-=======
 
     type User {
         _id: ID
@@ -55,7 +49,6 @@ const typeDefs = gql`
         deletePost(_id: ID!): Post
         deleteComment(postId: ID!, commentId: ID!): Post
     }
->>>>>>> develop
 `;
 
 // export the typeDefs
