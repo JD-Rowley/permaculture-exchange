@@ -19,7 +19,7 @@ const TradeList = ({ posts, title }) => {
               <div className='card-body'>
                 <p>{post.postDescription}</p>
               </div>
-              <button>Delete</button>
+              {/* <button>Delete</button> */}
             </div>
           ))}
       </div>
