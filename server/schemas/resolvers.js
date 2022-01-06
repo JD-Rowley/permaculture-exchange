@@ -84,20 +84,24 @@ const resolvers = {
       
             throw new AuthenticationError('You need to be logged in!');
           },
-        deletePost: async (parent, { _id }) => {
-            const deletedPost = await Post.findOneAndRemove(
-                { _id },
-                { new: true }
-            );
-
-            return deletedPost;
+        deletePost: async (parent, { _id }, context) => {
+            if (context.user) {
+                const deletedPost = await Post.findOneAndRemove(
+                    { _id },
+                    { new: true }
+                );
+    
+                return deletedPost;
+            }
         },
-        deleteComment: async (parent, { postId, commentId }) => {
-            const deletedComment = await Post.findOneAndUpdate(
-                { _id: postId },
-                { $pull: { comments: { _id: commentId }}},
-                { new: true }
-            );
+        deleteComment: async (parent, { postId, commentId }, context) => {
+            if (context.user) {
+                const deletedComment = await Post.findOneAndUpdate(
+                    { _id: postId },
+                    { $pull: { comments: { _id: commentId }}},
+                    { new: true }
+                );
+            }
 
             return deletedComment;
         }
