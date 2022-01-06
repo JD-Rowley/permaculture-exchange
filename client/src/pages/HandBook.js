@@ -26,6 +26,9 @@ function HandBook() {
                 <div>
                     <img src={spirit} className='logo' alt="UPC Logo" />
                 </div>
+                <div>
+                    <img src={spirit} className='logo' alt="UPC Logo" />
+                </div>
             </div>
         </section>
     );
