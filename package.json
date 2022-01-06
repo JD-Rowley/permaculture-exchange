@@ -1,6 +1,9 @@
 {
   "name": "permaculture-exchange",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.17.6"
+  },
   "description": "",
   "main": "server/server.js",
   "scripts": {

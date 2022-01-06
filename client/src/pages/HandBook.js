@@ -34,4 +34,4 @@ function HandBook() {
     );
 }
 
-export default Hanbook;
+export default Handbook;

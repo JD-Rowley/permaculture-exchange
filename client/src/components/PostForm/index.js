@@ -14,16 +14,17 @@ function PostForm() {
                     query: QUERY_POSTS,
                     data: { posts: [addPost, ...posts] }
                 });
+
+                const { me } = cache.readQuery({ query: QUERY_ME });
+
+                cache.writeQuery({
+                    query: QUERY_ME,
+                    data: { me: { ...me, posts: [...me.posts, addPost] } }
+                });    
             } catch (e) {
                 console.error(e);
             }
 
-            const { me } = cache.readQuery({ query: QUERY_ME });
-
-            cache.writeQuery({
-                query: QUERY_ME,
-                data: { me: { ...me, posts: [...me.posts, addPost] } }
-            });
         }
     });
 

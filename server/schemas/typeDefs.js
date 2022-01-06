@@ -52,6 +52,8 @@ const typeDefs = gql`
         addUser(username: String!, email: String!, password: String!): Auth
         addPost(postTitle: String!, postDescription: String!): Post
         addComment(postId: ID!, commentText: String!): Post
+        deletePost(_id: ID!): Post
+        deleteComment(postId: ID!, commentId: ID!): Post
     }
 >>>>>>> develop
 `;

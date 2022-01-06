@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+import { DELETE_POST } from '../../utils/mutations';
 
 const TradeList = ({ posts, title }) => {
-
-    if (!posts.length) {
-      return <h3>No posts Yet</h3>;
-    }
-  
     return (
       <div>
         <h3>{title}</h3>
@@ -22,6 +19,7 @@ const TradeList = ({ posts, title }) => {
               <div className='card-body'>
                 <p>{post.postDescription}</p>
               </div>
+              <button>Delete</button>
             </div>
           ))}
       </div>
