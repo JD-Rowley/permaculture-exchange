@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../assets/img/Logo.png';
-import spirit from '../assets/img/spirit.jpg'
+import spirit from '../assets/img/Screen Shot 2022-01-05 at 10.33.54 PM.jpg'
 
 function HandBook() {
     return (
@@ -24,7 +24,7 @@ function HandBook() {
                     Creatively use and respond to change - We can have a positive impact on inevitable change by carefully observing, and then intervening at the right time.
                 </p>
                 <div>
-                    <img src={spirit} className='logo' alt="UPC Logo" />
+                    <img src={spirit} className='logo' alt="spirtual wheel of importance" />
                 </div>
                 <div>
                     <img src={spirit} className='logo' alt="UPC Logo" />
