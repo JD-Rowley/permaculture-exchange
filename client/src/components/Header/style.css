@@ -15,3 +15,58 @@
   height: 96px;
   width: auto;
 }
+
+@media screen and (max-width: 980px) {
+  .header-logo img {
+    height: 95px;
+    width: auto;
+  }
+
+  .logo {
+    height: 35vh;
+  }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  .header-logo img {
+    height: 75px;
+  }
+
+  .logo {
+    height: 25vh;
+  }
+
+  .header-container {
+    padding-bottom: 10px;
+  }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  .header-logo img {
+    height: 65px;
+  }
+
+  .logo {
+    height: 15vh;
+  }
+
+  .header-container {
+    padding-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header-logo img {
+    height: 55px;
+  }
+
+  .logo {
+    height: 5vh;
+  }
+
+  .header-container {
+    padding-bottom: 2.5px;
+  }
+}

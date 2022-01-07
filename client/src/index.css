@@ -342,3 +342,84 @@ a:link {
   height: 45vh;
   width: auto;
 }
+
+@media screen and (max-width: 1070px) {
+  .about {
+    height: 75vh;
+  }
+
+  .post-form input,
+  .post-form textarea,
+  .comment-form textarea {
+    font-size: 10px;
+  }
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+  .about {
+    height: 75vh;
+  }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  .about {
+    height: 65vh;
+  }
+
+  .profile h2 {
+    font-size: 20px;
+  }
+
+  .create-post h3,
+  .trade-page h3,
+  .comment-page h3,
+  .comments-container h3 {
+    font-size: 15px;
+  }
+
+  .card-header b {
+    font-size: 12px;
+  }
+
+  .card-header p,
+  .card-header a {
+    font-size: 8px;
+  }
+
+  .card-body p {
+    font-size: 12px;
+  }
+
+  .comment-paragraph {
+    font-size: 12px;
+  }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  .about {
+    height: 45vh;
+  }
+
+  .about p {
+    font-size: 12px;
+  }
+
+  .post-form input,
+  .post-form textarea,
+  .comment-form textarea {
+    font-size: 5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .about {
+    height: 18vh;
+  }
+
+  .about p {
+    font-size: 6px;
+  }
+}

@@ -16,3 +16,35 @@
 a:hover {
   color: var(--russet);
 }
+
+@media screen and (max-width: 980px) {
+  .nav-bar {
+    font-size: 15px;
+  }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    font-size: 10px;
+    border-bottom: 5px dashed var(--olive);
+    padding: 0 0 6px;
+  }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  .nav-bar {
+    font-size: 5px;
+    border-bottom: 3px dashed var(--olive);
+    padding: 0 0 4px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nav-bar {
+    font-size: 2.5px;
+    border-bottom: 1.5px dashed var(--olive);
+    padding: 0 0 2px;
+  }
+}
