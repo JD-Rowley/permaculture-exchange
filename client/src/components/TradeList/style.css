@@ -1,35 +1,39 @@
 .card-container {
-    width: 75vw;
+  width: 75vw;
 }
 
 .card-header {
-    border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.card-container h3 {
+  font-family: "open_sansitalic";
 }
 
 .card-header p {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
 }
 
 .card-header p a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .card-body {
-    margin: 1rem;
+  margin: 1rem;
 }
 
 .card-body div {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .card-body div img {
-    flex: 1;
+  flex: 1;
 }
 
 .card-body div p {
-    flex: 4;
-    margin: 1rem;
+  flex: 4;
+  margin: 1rem;
 }
