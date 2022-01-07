@@ -126,12 +126,12 @@ a {
 
 .card-header b:hover {
   text-decoration: underline;
-  color: var(--sand);
+  color: var(--olive);
 }
 
 .card-header a:hover {
   text-decoration: underline;
-  color: var(--sand);
+  color: var(--olive);
 }
 
 .trade-username,
