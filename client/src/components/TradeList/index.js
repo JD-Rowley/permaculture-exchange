@@ -21,10 +21,6 @@ const TradeList = ({ posts, title }) => {
               </div>
               {/* <button>Delete</button> */}
             </div>
-            <div className="card-body">
-              <p>{post.postDescription}</p>
-            </div>
-          </div>
         ))}
     </div>
   );
