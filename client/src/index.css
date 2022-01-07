@@ -177,6 +177,14 @@ a:link {
   padding-bottom: 30px;
 }
 
+.post-container {
+  background: linear-gradient(
+    to bottom,
+    var(--sand),
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
 /* Trade Cards */
 .card-header,
 .card-body {
@@ -310,6 +318,25 @@ a:link {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /* Login and Sign Up End */
+
+/* Profile Start */
+.profile h2 {
+  font-family: "archisticobold";
+  color: var(--cacao);
+  background: linear-gradient(
+    to left,
+    var(--avocado),
+    rgba(255, 255, 255, 1) 100%
+  );
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: xxx-large;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  padding-bottom: 30px;
+}
+/* Profile End */
 
 .logo {
   height: 45vh;
