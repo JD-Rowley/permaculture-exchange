@@ -71,6 +71,169 @@ code {
 }
 /*about end */
 
+/* Trade Start */
+.create-post {
+  background: linear-gradient(
+    to left,
+    var(--avocado),
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.trade-page,
+.about {
+  background: linear-gradient(
+    to bottom,
+    var(--sand),
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.create-post h3,
+.trade-page h3,
+.comment-page h3,
+.comments-container h3 {
+  display: flex;
+  justify-content: center;
+  font-family: "open_sansitalic";
+  color: var(--olive);
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.card-header,
+b,
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-header,
+p,
+a {
+  font-family: "open_sanslight";
+  color: var(--cacao);
+}
+
+.card-header b {
+  padding: 0 10px 0 0;
+  font-family: "open_sansitalic";
+  text-transform: uppercase;
+  color: var(--cacao);
+  font-size: x-large;
+}
+
+.card-header b:hover {
+  text-decoration: underline;
+  color: var(--olive);
+}
+
+.card-header a:hover {
+  text-decoration: underline;
+  color: var(--olive);
+}
+
+.trade-username,
+.response-username {
+  font-size: large;
+  font-family: "open_sansitalic";
+  padding: 0 4px;
+}
+
+.card-body p {
+  padding: 0 10px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.post-form input,
+.post-form textarea,
+.comment-form textarea {
+  font-family: "open_sanslight";
+  width: 25%;
+  text-align: center;
+  border-width: 5px;
+  border-image: linear-gradient(
+      to top left,
+      var(--olive),
+      rgba(190, 191, 159, 1) 100%
+    )
+    1;
+  color: var(--cacao);
+  font-size: 20px;
+}
+
+.post-form textarea {
+  padding: 26px 0 0 0;
+  margin: 0 0 0 10px;
+}
+
+.post-form {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.post-container {
+  background: linear-gradient(
+    to bottom,
+    var(--sand),
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+/* Trade Cards */
+.card-header,
+.card-body {
+  border: 2px solid;
+  margin: 0 25%;
+  flex-flow: wrap;
+  border-image: linear-gradient(
+      to top left,
+      var(--olive),
+      rgba(190, 191, 159, 1) 100%
+    )
+    1;
+}
+
+.card-header {
+  justify-content: center;
+}
+
+.card-body {
+  display: flex;
+  margin-bottom: 2%;
+  border-top: 0;
+}
+/* Trade Cards End */
+/* Trade end */
+
+/* Comment Page Start */
+.comment-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment-response {
+  border: 3px solid;
+  padding: 1%;
+  margin: 1% 35%;
+  border-radius: 25px;
+}
+
+/* .comment-response a {
+  padding: 0 1px;
+} */
+
+.comment-paragraph {
+  font-size: 20px;
+}
+/* Comment Page End */
+
 /* Login and Sign Up */
 .flex-container {
   display: flex;
@@ -81,7 +244,7 @@ code {
 .main-container h1 {
   display: flex;
   justify-content: center;
-  font-family: "archisticobold";
+  font-family: "open_sansitalic";
   color: var(--soil);
   margin: auto;
   padding-top: 20px;
@@ -100,7 +263,7 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 25% 10px;
+  margin: 1% 25% 10px;
   background-image: linear-gradient(
     to top left,
     var(--olive),
@@ -155,6 +318,25 @@ code {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /* Login and Sign Up End */
+
+/* Profile Start */
+.profile h2 {
+  font-family: "archisticobold";
+  color: var(--cacao);
+  background: linear-gradient(
+    to left,
+    var(--avocado),
+    rgba(255, 255, 255, 1) 100%
+  );
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: xxx-large;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  padding-bottom: 30px;
+}
+/* Profile End */
 
 .logo {
   height: 45vh;
