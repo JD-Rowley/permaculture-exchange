@@ -208,6 +208,26 @@ a:link {
   margin-bottom: 2%;
   border-top: 0;
 }
+
+.delete {
+  font-size: 22px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px #999;
+  font-family: "open_sanslight";
+  background-color: var(--olive);
+  color: var(--cacao);
+}
+
+.delete:hover {
+  background-color: var(--avocado);
+}
+
+.delete:active {
+  background-color: var(--avocado);
+  box-shadow: 0 2px var(--cacao);
+  transform: translateY(2px);
+}
 /* Trade Cards End */
 /* Trade end */
 
@@ -422,6 +442,4 @@ a:link {
   .about p {
     font-size: 6px;
   }
-.delete {
-  
 }

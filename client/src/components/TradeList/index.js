@@ -4,12 +4,11 @@ import { useMutation } from "@apollo/client";
 import { DELETE_POST } from "../../utils/mutations";
 
 const TradeList = ({ posts, title }) => {
-
   function handelDelete(e) {
-    let removeId = e.target.id
-    let componentToDelete = document.getElementsByClassName(removeId)
-    componentToDelete = componentToDelete[0]
-    componentToDelete.remove()
+    let removeId = e.target.id;
+    let componentToDelete = document.getElementsByClassName(removeId);
+    componentToDelete = componentToDelete[0];
+    componentToDelete.remove();
   }
 
   return (
@@ -18,7 +17,9 @@ const TradeList = ({ posts, title }) => {
       {posts &&
         posts.map((post) => (
           <div key={post._id}>
-            <div className={`${post.postTitle}${post.postDescription}${post.createdAt}`}>
+            <div
+              className={`${post.postTitle}${post.postDescription}${post.createdAt}`}
+            >
               <div className="card-header">
                 <Link to={`/trade/${post._id}`}>
                   <b>{post.postTitle}</b>
@@ -37,7 +38,13 @@ const TradeList = ({ posts, title }) => {
               <div className="card-body">
                 <p>{post.postDescription}</p>
               </div>
-              <button onClick={handelDelete} id={`${post.postTitle}${post.postDescription}${post.createdAt}`} className="btn login-sign delete">Delete</button>
+              <button
+                onClick={handelDelete}
+                id={`${post.postTitle}${post.postDescription}${post.createdAt}`}
+                className="btn delete"
+              >
+                Delete
+              </button>
             </div>
           </div>
         ))}
