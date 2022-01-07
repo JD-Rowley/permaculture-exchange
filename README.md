@@ -40,6 +40,6 @@ This application is covered under the MIT license.
 Email the contributors for any questions at: 
 * [JD Rowley: jdrowley1989@gmail.com](mailto:jdrowley1989@gmail.com).
 * [Joe Hertig: joehertig94@gmail.com](mailto:joehertig94@gmail.com).
-* [Gerrit Elenbaas: Gerrit.his.email.com](mailto:Gerrit.his.email.com).
+* [Gerrit Elenbaas: elenb1gs@gmail.com](mailto:elenb1gs@gmail.com).
 * [Andrew Durham: andrewdurham1094@gmail.com](mailto:andrewdurham1094@gmail.com).
 
