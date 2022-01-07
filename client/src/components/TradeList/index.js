@@ -29,10 +29,6 @@ const TradeList = ({ posts, title }) => {
                 on {post.createdAt}
               </p>
             </div>
-            <div className="card-body">
-              <p>{post.postDescription}</p>
-            </div>
-          </div>
         ))}
     </div>
   );
