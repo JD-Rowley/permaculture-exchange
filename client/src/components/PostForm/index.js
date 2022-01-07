@@ -17,77 +17,72 @@ function PostForm() {
           query: QUERY_POSTS,
           data: { posts: [addPost, ...posts] },
         });
-
-        const { me } = cache.readQuery({ query: QUERY_ME });
-
-        cache.writeQuery({
-          query: QUERY_ME,
-          data: { me: { ...me, posts: [...me.posts, addPost] } },
-        });
       } catch (e) {
         console.error(e);
       }
+
+      const { me } = cache.readQuery({ query: QUERY_ME });
+
+      cache.writeQuery({
+        query: QUERY_ME,
+        data: { me: { ...me, posts: [...me.posts, addPost] } },
+      });
     },
   });
 
-  cache.writeQuery({
-    query: QUERY_ME,
-    data: { me: { ...me, posts: [...me.posts, addPost] } },
-  });
-}
-
-function handleChange(e) {
-  const { name, value } = e.target;
-
-  setFormState({
-    ...formState,
-    [name]: value,
-  });
-}
-
-async function handleFormSubmit(e) {
-  e.preventDefault();
-
-  try {
-    await addPost({
-      variables: { ...formState },
-    });
+  function handleChange(e) {
+    const { name, value } = e.target;
 
     setFormState({
-      postTitle: "",
-      postDescription: "",
+      ...formState,
+      [name]: value,
     });
-  } catch (e) {
-    console.error(e);
   }
-}
 
-return (
-  <div className="create-post">
-    <h3>CREATE A TRADE POST</h3>
-    {error && <div>Something went wrong...</div>}
-    <form className="post-form" onSubmit={handleFormSubmit}>
-      <input
-        type="text"
-        placeholder="What will you call this post?"
-        name="postTitle"
-        className="post-title"
-        id="title"
-        value={formState.postTitle}
-        onChange={handleChange}
-      />
-      <textarea
-        placeholder="Are you looking to trade?"
-        name="postDescription"
-        className="post-description"
-        value={formState.postDescription}
-        onChange={handleChange}
-      ></textarea>
-      <button type="submit" className="btn login-sign">
-        Submit
-      </button>
-    </form>
-  </div>
-);
+  async function handleFormSubmit(e) {
+    e.preventDefault();
+
+    try {
+      await addPost({
+        variables: { ...formState },
+      });
+
+      setFormState({
+        postTitle: "",
+        postDescription: "",
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  return (
+    <div className="create-post">
+      <h3>CREATE A TRADE POST</h3>
+      {error && <div>Something went wrong...</div>}
+      <form className="post-form" onSubmit={handleFormSubmit}>
+        <input
+          type="text"
+          placeholder="What will you call this post?"
+          name="postTitle"
+          className="post-title"
+          id="title"
+          value={formState.postTitle}
+          onChange={handleChange}
+        />
+        <textarea
+          placeholder="Are you looking to trade?"
+          name="postDescription"
+          className="post-description"
+          value={formState.postDescription}
+          onChange={handleChange}
+        ></textarea>
+        <button type="submit" className="btn login-sign">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+}
 
 export default PostForm;
